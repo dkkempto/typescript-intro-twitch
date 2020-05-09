@@ -195,8 +195,8 @@ function ${titleToFunctionName(challenge.title)}() {
 }
 
 const defaultGitIgnore = `
-node_modules
-dist
+node_modules/
+dist/
 `
 
 const createChallengeDirectory = async(challenge: Challenge) => {
