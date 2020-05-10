@@ -4,7 +4,8 @@
 * #=================================================================#
 */
 
-function alphabetize() {
+function alphabetize(str: string): string {
   //TODO: Implement the function here
+  return null;
 }
  

@@ -7,6 +7,8 @@
 
 ## Strings
 - String Interpolation
+ - reverse-word
+ - alphabetize
 
 ## Numbers
 - Converting
@@ -44,6 +46,7 @@
 ## Typescript Stuff
 
 ### Interfaces
+  - convert-to-morse-code can use them
 
 ### Types
 - Unions

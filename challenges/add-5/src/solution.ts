@@ -4,7 +4,7 @@
 * #============================================#
 */
 
-function add5(num: Number) {
-  //TODO: Implement the function here
+function _add5(num: number ) : number {
+  return num + 5;
 }
  

@@ -1,11 +1,10 @@
 /*
 * #=============================================================#
-* | Write a function that translates any string into morse code | 
+* | Write a function that returns any sentence in a frame of #s | 
 * #=============================================================#
 */
 
-function convertToMorseCode(input: string) : string {
+function _sentenceFrameNumbers() {
   //TODO: Implement the function here
-  return null;
 }
  

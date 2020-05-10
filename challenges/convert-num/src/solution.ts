@@ -4,8 +4,10 @@
 * #=======================================================================================================================#
 */
 
-function convertNum(num: number) : string {
-  //TODO: Implement the function here
-  return null;
+function _convertNum(num: number) : string {
+  const str = num.toString();
+  const digits = str.split('').map(d => Number.parseInt(d));
+  const convertedDigits = digits.map(d => d > 5 ? 1 : 0);
+  return convertedDigits.join();
 }
  

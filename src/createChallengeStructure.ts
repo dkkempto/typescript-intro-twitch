@@ -194,6 +194,24 @@ function ${titleToFunctionName(challenge.title)}() {
  `;
 }
 
+const getSolutionTemplate = (challenge: Challenge) : string => {
+  
+  const descLine = ` Write a function that ${challenge.description} `;
+  const numEqualSigns = descLine.length;
+  const equalSigns = '='.repeat(numEqualSigns);
+
+  return `/*
+* #${equalSigns}#
+* |${descLine}| 
+* #${equalSigns}#
+*/
+
+function _${titleToFunctionName(challenge.title)}() {
+  //TODO: Implement the function here
+}
+ `;
+}
+
 const defaultGitIgnore = `
 node_modules/
 dist/
@@ -208,6 +226,7 @@ const createChallengeDirectory = async(challenge: Challenge) => {
   const packageJsonFilePath = path.join(challengeDir, 'package.json');
   const gitIgnoreFilePath = path.join(challengeDir, '.gitignore')
   const mainTsFilePath = path.join(srcDir, 'index.ts');
+  const solutionTsFilePath = path.join(srcDir, 'solution.ts');
 
   const packageJson = {
     name: challenge.title,
@@ -221,7 +240,9 @@ const createChallengeDirectory = async(challenge: Challenge) => {
   await writeFile(tsConfigFilePath, JSON.stringify(basicTsConfig, null, 2));
   await writeFile(packageJsonFilePath, JSON.stringify(packageJson, null, 2));
   await writeFile(gitIgnoreFilePath, defaultGitIgnore);
-  await writeFile(mainTsFilePath, getFileTemplate(challenge));
+  
+  if(!fs.existsSync(mainTsFilePath)) await writeFile(mainTsFilePath, getFileTemplate(challenge));
+  if(!fs.existsSync(solutionTsFilePath)) await writeFile(solutionTsFilePath, getSolutionTemplate(challenge));
 }
 
 (async() => {
