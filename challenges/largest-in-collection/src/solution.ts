@@ -4,7 +4,6 @@
 * #==================================================================#
 */
 
-function _largestInCollection() {
-  //TODO: Implement the function here
+function _largestInCollection<T>(list: Array<T>): T  {
+  return list.reduce((a,b) => b > a ? b : a);
 }
- 

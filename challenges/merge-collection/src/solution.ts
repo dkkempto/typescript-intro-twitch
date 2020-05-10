@@ -4,7 +4,7 @@
 * #========================================================#
 */
 
-function _mergeCollection() {
-  //TODO: Implement the function here
+function _mergeCollection<T>(a: Array<T> , b: Array<T> ): Array<T> {
+  return [...a, ...b];
 }
  

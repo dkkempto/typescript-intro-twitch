@@ -4,7 +4,8 @@
 * #=============================================#
 */
 
-function _reverseSentence() {
-  //TODO: Implement the function here
+function _reverseSentence(sentence: string): string {
+  const words = sentence.trim().split(/\s+/g);
+  return words.reverse().join(' ');
 }
  

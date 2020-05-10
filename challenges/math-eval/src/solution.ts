@@ -4,7 +4,16 @@
 * #==============================================================================================================#
 */
 
-function _mathEval() {
-  //TODO: Implement the function here
+type Operation = '+' | '-' | '*' | '/';
+
+function _mathEval(a: number, b: number, op: Operation) : number {
+  switch (op) {
+    case "+": return a + b;
+    case "-": return a - b;
+    case "/": return a / b;
+    case "*": return a * b;
+    default:
+      break;
+  }
 }
  

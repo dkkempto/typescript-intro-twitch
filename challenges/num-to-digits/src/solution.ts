@@ -4,7 +4,7 @@
 * #==========================================================================#
 */
 
-function _numToDigits() {
-  //TODO: Implement the function here
+function _numToDigits(num: number): number[] {
+  return num.toString().split('').map(c => Number.parseInt(c));
 }
  

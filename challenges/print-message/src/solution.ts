@@ -4,7 +4,7 @@
 * #=======================================================#
 */
 
-function _printMessage() {
-  //TODO: Implement the function here
+function _printMessage(msg: string) {
+  console.log(msg);
 }
  

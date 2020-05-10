@@ -4,7 +4,7 @@
 * #=========================================#
 */
 
-function reverseWord() {
-  //TODO: Implement the function here
+function reverseWord(word: string): string {
+  return word.split('').reverse().join();
 }
  
